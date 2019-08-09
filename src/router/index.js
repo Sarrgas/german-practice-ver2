@@ -17,11 +17,13 @@ export default new Router({
         {
             path: '/words',
             name: 'Words',
+            props: true,
             component: WordPage,
         },
         {
             path: '/verbs',
             name: 'Verbs',
+            props: true,
             component: VerbPage,
         }
     ],
