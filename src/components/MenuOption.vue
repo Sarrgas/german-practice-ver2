@@ -10,7 +10,7 @@
                 <input type="checkbox"> {{num.min}} - {{num.max}}
             </div>
             <div>
-                <router-link :to="{name: linkTo, params: {numbers: [1,2,3,4,5]}}"><button class="start-button">Start</button></router-link>
+                <router-link :to="{name: linkTo, params: {numbers: [0,1,2]}}"><button class="start-button">Start</button></router-link>
             </div>
         </div>
     </div>
