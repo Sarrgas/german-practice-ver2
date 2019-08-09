@@ -12,9 +12,18 @@ import allwords from '../data/words';
 export default {
     name: 'WordPage',
     props: {
-        numbers: Array
+        checkedBoxes: Array
     },
     computed: {
+        numbers() {
+            let nums = [];
+            for (const box of this.checkedBoxes) {
+                for (let num = box.min; num <= box.max; num++) {
+                    nums.push(num);
+                }
+            }
+            return nums;
+        },
         sessionWords() {
             return allwords.filter(word => this.numbers.includes(word.id));
         }

@@ -7,24 +7,26 @@
         <div class="menu-option-extender" v-if="clicked">
             <div>Pick your words:</div>
             <div v-for="(num, i) in dividerGenerator" :key="i" class="range-boxes">
-                <input type="checkbox"> {{num.min}} - {{num.max}}
+                <input type="checkbox" :value="num" v-model="checkedBoxes"> {{num.min}} - {{num.max}}
             </div>
             <div>
-                <router-link :to="{name: linkTo, params: {numbers: [0,1,2]}}"><button class="start-button">Start</button></router-link>
+                <router-link :to="{name: linkTo, params: {checkedBoxes}}"><button class="start-button">Start</button></router-link>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import allWords from '../data/words.js';
 export default {
     name: 'MenuOption',
     props: ['title', 'text', 'linkTo'],
     data() {
         return {
-            clicked: false,
-            totalWordCount: 50,
-            dividerNumber: 10
+            clicked: true,
+            totalWordCount: allWords.length,
+            dividerNumber: 2,
+            checkedBoxes: []
         }
     },
     computed: {

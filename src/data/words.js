@@ -1,11 +1,5 @@
 const words = [
     {
-        id: 0,
-        the: 'der',
-        german: 'Apfel',
-        swedish: 'Äpple',
-    },
-    {
         id: 1,
         the: 'die',
         german: 'Zeitung',
@@ -16,6 +10,18 @@ const words = [
         the: 'das',
         german: 'Mädchen',
         swedish: 'Flicka'
+    },
+    {
+        id: 3,
+        the: 'der',
+        german: 'Käse',
+        swedish: 'Ost'
+    },
+    {
+        id: 4,
+        the: 'der',
+        german: 'Apfel',
+        swedish: 'Äpple',
     }
 ];
 
