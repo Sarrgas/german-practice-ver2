@@ -5,11 +5,13 @@
             <span>{{ text }}</span>
         </div>
         <div class="menu-option-extender" v-if="clicked">
-            <span>Alla ord eller bara några?</span>
-            <div v-for="(num, i) in dividerGenerator" :key="i">
+            <div>Alla ord eller bara några?</div>
+            <div v-for="(num, i) in dividerGenerator" :key="i" class="range-boxes">
                 <input type="checkbox"> {{num.min}} - {{num.max}}
             </div>
-            <button>Start</button>
+            <div>
+                <button class="start-button">Start</button>
+            </div>
         </div>
     </div>
 </template>
@@ -20,7 +22,7 @@ export default {
     props: ['title', 'text'],
     data() {
         return {
-            clicked: true,
+            clicked: false,
             totalWordCount: 50,
             dividerNumber: 10
         }
@@ -46,18 +48,29 @@ export default {
 .menu-option {
     display: inline-block;
     margin: 5px;
-    padding: 5px;
-    padding-bottom: 20px;
+    width: 350px;
+    vertical-align: top;
 }
 .menu-option-button {
     border: 2px solid rgba(16, 83, 16, 0.787);
     border-radius: 5px;
     cursor: pointer;
     background-color: rgba(0, 133, 0, 0.541);
+    padding: 5px;
+    padding-bottom: 20px;
 }
 .menu-option-extender {
     border: 2px solid rgba(51, 121, 51, 0.787);
     padding: 5px;
     background-color: rgba(130, 185, 130, 0.698);
+}
+.range-boxes {
+    display: inline-block;
+    border: 2px solid rgba(229, 255, 229, 0.787);
+    padding: 10px;
+    margin: 3px;
+}
+.start-button {
+    width: 300px;
 }
 </style>
