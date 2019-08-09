@@ -179,7 +179,126 @@ const words = [
         german: 'Salz',
         swedish: 'Salt',
     },
-    
+    {
+        id: 31,
+        the: 'der',
+        german: 'Fisch',
+        swedish: 'Fisk',
+    },
+    {
+        id: 32,
+        the: 'das',
+        german: 'Essen',
+        swedish: 'Mat',
+    },
+    {
+        id: 33,
+        the: 'der',
+        german: 'Tee',
+        swedish: 'Te',
+    },
+    {
+        id: 34,
+        the: 'die',
+        german: 'Pizza',
+        swedish: 'Pizza',
+    },
+    {
+        id: 35,
+        the: 'der',
+        german: 'Bär',
+        swedish: 'Björn',
+    },
+    {
+        id: 36,
+        the: 'die',
+        german: 'Katze',
+        swedish: 'Katt',
+    },
+    {
+        id: 37,
+        the: 'das',
+        german: 'Tier',
+        swedish: 'Djur',
+    },
+    {
+        id: 38,
+        the: 'der',
+        german: 'Hund',
+        swedish: 'Hund',
+    },
+    {
+        id: 39,
+        the: 'die',
+        german: 'Maus',
+        swedish: 'Mus',
+    },
+    {
+        id: 40,
+        the: 'der',
+        german: 'Vogel',
+        swedish: 'Fågel',
+    },
+    {
+        id: 41,
+        the: 'das',
+        german: 'Pferd',
+        swedish: 'Häst',
+    },
+    {
+        id: 42,
+        the: 'die',
+        german: 'Ente',
+        swedish: 'Anka',
+    },
+    {
+        id: 43,
+        the: 'das',
+        german: 'Schwein',
+        swedish: 'Gris',
+    },
+    {
+        id: 44,
+        the: 'die',
+        german: 'Kuh',
+        swedish: 'Ko',
+    },
+    {
+        id: 45,
+        the: 'das',
+        german: 'Haustier',
+        swedish: 'Husdjur',
+    },
+    {
+        id: 46,
+        the: 'die',
+        german: 'Spinne',
+        swedish: 'Spindel',
+    },
+    {
+        id: 47,
+        the: 'das',
+        german: 'Insekt',
+        swedish: 'Insekt',
+    },
+    {
+        id: 48,
+        the: 'die',
+        german: 'Biene',
+        swedish: 'Bi',
+    },
+    {
+        id: 49,
+        the: 'der',
+        german: 'Käfer',
+        swedish: 'Skalbagge',
+    },
+    {
+        id: 50,
+        the: 'die',
+        german: 'Fliege',
+        swedish: 'Fluga',
+    },
 ];
 
 export default words;
