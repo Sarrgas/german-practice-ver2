@@ -23,9 +23,9 @@ export default {
     props: ['title', 'text', 'linkTo'],
     data() {
         return {
-            clicked: true,
+            clicked: false,
             totalWordCount: allWords.length,
-            dividerNumber: 2,
+            dividerNumber: 10,
             checkedBoxes: []
         }
     },
