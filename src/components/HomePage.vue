@@ -1,7 +1,7 @@
 <template>
     <div>
-        <MenuOption title="Words" text="Translate from German to Swedish" />
-        <MenuOption title="Verbs" text="Conjugate the German verbs"/>
+        <MenuOption linkTo="/words" title="Words" text="Translate from German to Swedish" />
+        <MenuOption linkTo="/verbs" title="Verbs" text="Conjugate the German verbs"/>
     </div>
 </template>
 

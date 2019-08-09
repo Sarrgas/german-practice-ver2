@@ -10,7 +10,7 @@
                 <input type="checkbox"> {{num.min}} - {{num.max}}
             </div>
             <div>
-                <button class="start-button">Start</button>
+                <router-link :to='linkTo'><button class="start-button">Start</button></router-link>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
 <script>
 export default {
     name: 'MenuOption',
-    props: ['title', 'text'],
+    props: ['title', 'text', 'linkTo'],
     data() {
         return {
             clicked: false,
