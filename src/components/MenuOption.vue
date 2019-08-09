@@ -5,7 +5,7 @@
             <span>{{ text }}</span>
         </div>
         <div class="menu-option-extender" v-if="clicked">
-            <div>Alla ord eller bara några?</div>
+            <div>Pick your words:</div>
             <div v-for="(num, i) in dividerGenerator" :key="i" class="range-boxes">
                 <input type="checkbox"> {{num.min}} - {{num.max}}
             </div>
