@@ -19,21 +19,21 @@
 <script>
 export default {
     name: 'MenuOption',
-    props: ['title', 'text', 'linkTo', 'data'],
+    props: ['title', 'text', 'linkTo', 'data', 'divider'],
     data() {
         return {
             clicked: false,
             totalDataCount: this.data.length,
-            dividerNumber: 10,
             checkedBoxes: []
         }
     },
     computed: {
         dividerGenerator() {
+            let dividerNumber = parseInt(this.divider);
             let result = [];
             for (let index = 1; index <= this.totalDataCount; index++) {
-                if (index % this.dividerNumber === 0) {
-                    let min = 1 + index - this.dividerNumber;
+                if (index % dividerNumber === 0) {
+                    let min = 1 + index - dividerNumber;
                     let max = index;
 
                     result.push({min, max});

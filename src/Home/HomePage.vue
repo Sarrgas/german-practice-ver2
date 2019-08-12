@@ -1,7 +1,7 @@
 <template>
     <div>
-        <MenuOption linkTo="Nouns" :data="allNouns" title="Substantiv" text="Översätt substantiv från Tyska till Svenska och välj rätt artikel (der, die, das)." />
-        <MenuOption linkTo="Verbs" :data="allVerbs" title="Verb" text="Böj de tysta verben för olika personer (ich, du, er/sie/es, wir, ihr, sie)."/>
+        <MenuOption linkTo="Nouns" divider="10" :data="allNouns" title="Substantiv" text="Översätt substantiv från Tyska till Svenska och välj rätt artikel (der, die, das)." />
+        <MenuOption linkTo="Verbs" divider="3" :data="allVerbs" title="Verb" text="Böj de tysta verben för olika personer (ich, du, er/sie/es, wir, ihr, sie)."/>
     </div>
 </template>
 
