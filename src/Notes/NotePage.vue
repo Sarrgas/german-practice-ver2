@@ -38,6 +38,14 @@
                 <b>Die</b> Frau förblir <b>Die</b> Frauen
             </p>
         </div>
+        <div class="note">
+            <h3>Substantiv</h3>
+            <p>
+                Alla substantiv skrivs med stor begynnelsebokstav. <br />
+                Om man exempelvis skulle skriva "En katt åt en fluga." blir det: <br />
+                Eine <b>K</b>atze frisst eine <b>F</b>liege.
+            </p>
+        </div>
     </div>
 </template>
 
