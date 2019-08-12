@@ -5,7 +5,7 @@ const verbs = [
         swedish: 'Vara',
         ich: 'bin',
         du: 'bist',
-        ersieest: 'ist',
+        ersiees: 'ist',
         wir: 'sind',
         ihr: 'seid',
         sie: 'sind'
@@ -16,7 +16,7 @@ const verbs = [
         swedish: 'Ha',
         ich: 'habe',
         du: 'hast',
-        ersieest: 'hat',
+        ersiees: 'hat',
         wir: 'haben',
         ihr: 'habt',
         sie: 'haben'
@@ -27,7 +27,7 @@ const verbs = [
         swedish: 'Äta',
         ich: 'esse',
         du: 'isst',
-        ersieest: 'isst',
+        ersiees: 'isst',
         wir: 'essen',
         ihr: 'esst',
         sie: 'essen'
