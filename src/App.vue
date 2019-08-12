@@ -1,6 +1,16 @@
 <template>
   <div id="app">
-    <router-view />
+    <header>
+      <nav>
+        <ul>
+          <li><router-link :to="{name: 'Home'}"> <div class="nav-item">Hem</div></router-link></li>
+          <li><router-link :to="{name: 'Notes'}"> <div class="nav-item">Anteckningar</div></router-link></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="main">
+      <router-view />
+    </div>
   </div>
 </template>
 
@@ -18,6 +28,30 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+#main {
+  margin-top: 40px;
+}
+.nav-item {
+  padding: 20px;
+}
+.nav-item:hover {
+  background-color: rgba(16, 136, 0, 0.52);
+}
+header {
+  text-align: left;
+}
+nav {
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: rgba(204, 255, 208, 0.74);
+}
+ul {
+  margin: 0px;
+}
+nav ul li {
+      display: inline-block;
+      list-style-type: none;
+}
+
 </style>

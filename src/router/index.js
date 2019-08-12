@@ -6,6 +6,7 @@ Vue.use(Router);
 import HomePage from '../Home/HomePage.vue';
 import NounPage from '../Noun/NounPage.vue';
 import VerbPage from '../Verb/VerbPage.vue';
+import NotePage from '../Notes/NotePage.vue';
 
 export default new Router({
     routes: [
@@ -25,6 +26,11 @@ export default new Router({
             name: 'Verbs',
             props: true,
             component: VerbPage,
+        },
+        {
+            path: '/notes',
+            name: 'Notes',
+            component: NotePage,
         }
     ],
 });
