@@ -29,6 +29,15 @@
                 Ich habe Durst - Jag har törst <br />
             </p>
         </div>
+        <div class="note">
+            <h3>Plural</h3>
+            <p>
+                Alla substantiv får artikeln "Die" i plural oavsett kön. Exempel: <br />
+                <b>Der</b> Hund blir <b>Die</b> Hunden
+                <b>Das</b> Mädchen blir <b>Die</b> Mädchen
+                <b>Die</b> Frau förblir <b>Die</b> Frauen
+            </p>
+        </div>
     </div>
 </template>
 
