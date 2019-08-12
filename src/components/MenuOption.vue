@@ -5,12 +5,12 @@
             <span>{{ text }}</span>
         </div>
         <div class="menu-option-extender" v-if="clicked">
-            <div>Pick your nouns:</div>
+            <div>Vilka ord vill du öva?</div>
             <div v-for="(num, i) in dividerGenerator" :key="i" class="range-boxes">
                 <input type="checkbox" :value="num" v-model="checkedBoxes"> {{num.min}} - {{num.max}}
             </div>
             <div>
-                <router-link :to="{name: linkTo, params: {checkedBoxes}}"><button class="start-button">Start</button></router-link>
+                <router-link :to="{name: linkTo, params: {checkedBoxes}}"><button class="start-button">Kör</button></router-link>
             </div>
         </div>
     </div>

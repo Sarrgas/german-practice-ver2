@@ -1,7 +1,7 @@
 <template>
     <div>
-        <MenuOption linkTo="Nouns" title="Nouns" text="Translate nouns from German to Swedish" />
-        <MenuOption linkTo="Verbs" title="Verbs" text="Conjugate the German verbs"/>
+        <MenuOption linkTo="Nouns" title="Substantiv" text="Översätt substantiv från Tyska till Svenska och välj rätt artikel (der, die, das)." />
+        <MenuOption linkTo="Verbs" title="Verb" text="Böj de tysta verben för olika personer (ich, du, er/sie/es, wir, ihr, sie)."/>
     </div>
 </template>
 
