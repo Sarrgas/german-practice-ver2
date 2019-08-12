@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>And this is the glorious Verb page!</h2>
-        <div v-for="(verb, i) in allVerbs" :key="i">
+        <div v-for="(verb, i) in sessionVerbs" :key="i">
             <VerbComponent :verb="verb" />
         </div>
     </div>
@@ -14,14 +14,23 @@ import VerbComponent from './VerbComponent.vue';
 export default {
     name: 'VerbPage',
     props: {
-        numbers: Array
+        checkedBoxes: Array
     },
     components: {VerbComponent},
-    data() {
-        return {
-            allVerbs
+    computed: {
+        numbers() {
+            let nums = [];
+            for (const box of this.checkedBoxes) {
+                for (let num = box.min; num <= box.max; num++) {
+                    nums.push(num);
+                }
+            }
+            return nums;
+        },
+        sessionVerbs() {
+            return allVerbs.filter(verb => this.numbers.includes(verb.id));
         }
-    }
+    },
 }
 </script>
 
