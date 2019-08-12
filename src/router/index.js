@@ -3,9 +3,9 @@ import Router from 'vue-router';
 
 Vue.use(Router);
 
-import HomePage from '../components/HomePage.vue';
-import NounPage from '../components/NounPage.vue';
-import VerbPage from '../components/VerbPage.vue';
+import HomePage from '../Home/HomePage.vue';
+import NounPage from '../Noun/NounPage.vue';
+import VerbPage from '../Verb/VerbPage.vue';
 
 export default new Router({
     routes: [
