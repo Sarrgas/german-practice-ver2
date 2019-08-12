@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="content">
         <div class="note">
             <h3>Ackusativ</h3>
             <p>
@@ -39,6 +39,9 @@ export default {
 </script>
 
 <style scoped>
+#content {
+    text-align: left;
+}
 .note{
     text-align: left;
     border: 2px solid black;
@@ -46,5 +49,7 @@ export default {
     padding: 10px;
     width: 500px;
     margin: 5px;
+    display:inline-block;
+    vertical-align: top;
 }
 </style>

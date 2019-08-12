@@ -1,8 +1,6 @@
 <template>
     <div>
-        <div v-for="(verb, i) in sessionVerbs" :key="i">
-            <VerbComponent :verb="verb" />
-        </div>
+        <VerbComponent v-for="(verb, i) in sessionVerbs" :key="i" :verb="verb" />
     </div>
 </template>
 

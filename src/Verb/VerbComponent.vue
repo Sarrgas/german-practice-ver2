@@ -97,6 +97,7 @@ export default {
     border-radius: 5px;
     padding:5px;
     margin: 5px;
+    display: inline-block;
 }
 .correct {
     background-color: #abff5847;

@@ -64,6 +64,7 @@ export default {
     border-radius: 5px;
     padding:5px;
     margin: 5px;
+    display: inline-block;
 }
 .correct {
     background-color: rgba(162, 250, 74, 0.623);
