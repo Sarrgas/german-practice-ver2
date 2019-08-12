@@ -1,4 +1,4 @@
-const words = [
+const nouns = [
     {
         id: 1,
         the: 'der',
@@ -301,4 +301,4 @@ const words = [
     },
 ];
 
-export default words;
+export default nouns;

@@ -1,16 +1,15 @@
 <template>
     <div>
-        <WordComponent v-for="(w, i) in sessionWords" :word="w" :key="i"/>
+        <NounComponent v-for="(w, i) in sessionNouns" :noun="w" :key="i"/>
     </div>
 </template>
 
 <script>
-import WordComponent from "./WordComponent.vue";
-import allwords from '../data/words';
-
+import NounComponent from "./NounComponent.vue";
+import allnouns from '../data/nouns.js';
 
 export default {
-    name: 'WordPage',
+    name: 'NounPage',
     props: {
         checkedBoxes: Array
     },
@@ -24,11 +23,11 @@ export default {
             }
             return nums;
         },
-        sessionWords() {
-            return allwords.filter(word => this.numbers.includes(word.id));
+        sessionNouns() {
+            return allnouns.filter(noun => this.numbers.includes(noun.id));
         }
     },
-    components: {WordComponent}
+    components: {NounComponent}
 }
 </script>
 

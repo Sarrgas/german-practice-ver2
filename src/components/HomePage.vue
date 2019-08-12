@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MenuOption linkTo="Words" title="Words" text="Translate from German to Swedish" />
+        <MenuOption linkTo="Nouns" title="Nouns" text="Translate nouns from German to Swedish" />
         <MenuOption linkTo="Verbs" title="Verbs" text="Conjugate the German verbs"/>
     </div>
 </template>

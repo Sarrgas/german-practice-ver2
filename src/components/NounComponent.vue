@@ -1,21 +1,21 @@
 <template>
-    <div :class="['word', answerColorClass]">
+    <div :class="['noun', answerColorClass]">
         <div>
-            {{ word.german }}    
+            {{ noun.german }}    
         </div>
         <div>
             <input type="radio" 
-                v-bind:name="word.id"
+                v-bind:name="noun.id"
                 v-model="usrThe" 
                 value="Der">
             <label>Der</label>
             <input type="radio" 
-                v-bind:name="word.id" 
+                v-bind:name="noun.id" 
                 v-model="usrThe" 
                 value="Die" >
             <label>Die</label>
             <input type="radio" 
-                v-bind:name="word.id" 
+                v-bind:name="noun.id" 
                 v-model="usrThe" 
                 value="Das" >
             <label>Das</label>        
@@ -28,9 +28,9 @@
 
 <script>
 export default {
-    name: 'WordComponent',
+    name: 'NounComponent',
     props: {
-        word: {}
+        noun: {}
     },
     data() {
         return {
@@ -44,8 +44,8 @@ export default {
         },
         isCorrect() {
             return this.isAnswered && 
-                   this.usrThe.toLowerCase() === this.word.the.toLowerCase() &&
-                   this.usrSwedish.toLowerCase() === this.word.swedish.toLowerCase();
+                   this.usrThe.toLowerCase() === this.noun.the.toLowerCase() &&
+                   this.usrSwedish.toLowerCase() === this.noun.swedish.toLowerCase();
         },
         answerColorClass(){
             if (!this.isAnswered) {
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped>
-.word {
+.noun {
     width: 200px;
     border: 1px solid black;
     border-radius: 5px;

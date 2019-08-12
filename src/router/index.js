@@ -4,7 +4,7 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 import HomePage from '../components/HomePage.vue';
-import WordPage from '../components/WordPage.vue';
+import NounPage from '../components/NounPage.vue';
 import VerbPage from '../components/VerbPage.vue';
 
 export default new Router({
@@ -15,10 +15,10 @@ export default new Router({
             component: HomePage,
         },
         {
-            path: '/words',
-            name: 'Words',
+            path: '/nouns',
+            name: 'Nouns',
             props: true,
-            component: WordPage,
+            component: NounPage,
         },
         {
             path: '/verbs',

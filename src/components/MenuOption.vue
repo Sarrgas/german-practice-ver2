@@ -5,7 +5,7 @@
             <span>{{ text }}</span>
         </div>
         <div class="menu-option-extender" v-if="clicked">
-            <div>Pick your words:</div>
+            <div>Pick your nouns:</div>
             <div v-for="(num, i) in dividerGenerator" :key="i" class="range-boxes">
                 <input type="checkbox" :value="num" v-model="checkedBoxes"> {{num.min}} - {{num.max}}
             </div>
@@ -17,14 +17,14 @@
 </template>
 
 <script>
-import allWords from '../data/words.js';
+import allNouns from '../data/nouns.js';
 export default {
     name: 'MenuOption',
     props: ['title', 'text', 'linkTo'],
     data() {
         return {
             clicked: false,
-            totalWordCount: allWords.length,
+            totalNounCount: allNouns.length,
             dividerNumber: 10,
             checkedBoxes: []
         }
@@ -32,7 +32,7 @@ export default {
     computed: {
         dividerGenerator() {
             let result = [];
-            for (let index = 1; index <= this.totalWordCount; index++) {
+            for (let index = 1; index <= this.totalNounCount; index++) {
                 if (index % this.dividerNumber === 0) {
                     let min = 1 + index - this.dividerNumber;
                     let max = index;
