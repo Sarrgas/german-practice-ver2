@@ -61,6 +61,7 @@ nav ul li {
 
 .router-link-active {
   color: rgb(134, 134, 134);
+  text-decoration: underline;
 }
 
 </style>

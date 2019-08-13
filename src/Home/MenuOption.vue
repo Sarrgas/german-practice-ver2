@@ -67,12 +67,14 @@ export default {
     margin: 5px;
     width: 350px;
     vertical-align: top;
+    z-index: 50;
+    position: relative
 }
 .menu-option-button {
     border: 2px solid rgba(16, 83, 16, 0.787);
     border-radius: 5px;
     cursor: pointer;
-    background-color: rgba(0, 133, 0, 0.541);
+    background-color: rgb(78, 202, 78);
     padding: 5px;
     padding-bottom: 20px;
 }
@@ -80,6 +82,10 @@ export default {
     border: 2px solid rgba(51, 121, 51, 0.787);
     padding: 5px;
     background-color: rgba(130, 185, 130, 0.698);
+    position: relative;
+    animation-name: example;
+    animation-duration: 0.3s;
+    z-index: -5;
 }
 .range-boxes {
     display: inline-block;
@@ -89,5 +95,10 @@ export default {
 }
 .start-button {
     width: 300px;
+}
+
+@keyframes example {
+  from {position: relative; top: -120px}
+  to {position: relative; top: -0px}
 }
 </style>
