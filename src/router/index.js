@@ -7,6 +7,7 @@ import HomePage from '../Home/HomePage.vue';
 import NounPage from '../Noun/NounPage.vue';
 import VerbPage from '../Verb/VerbPage.vue';
 import NotePage from '../Notes/NotePage.vue';
+import AddPage from '../Add/AddPage.vue';
 
 export default new Router({
     routes: [
@@ -31,6 +32,11 @@ export default new Router({
             path: '/notes',
             name: 'Notes',
             component: NotePage,
+        },
+        {
+            path: '/add',
+            name: 'Add',
+            component: AddPage,
         }
     ],
 });
