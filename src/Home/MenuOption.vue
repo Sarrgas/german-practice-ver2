@@ -5,8 +5,11 @@
             <span>{{ text }}</span>
         </div>
         <div class="menu-option-extender" v-if="clicked">
-            <div>Vilka ord vill du öva?</div>
-            <div v-for="(num, i) in dividerGenerator" :key="i" class="range-boxes">
+            <div>
+                Vilka ord vill du öva?
+                <input type="checkbox" @click="selectAll">Alla
+            </div>
+            <div v-for="(num, i) in checkboxList" :key="i" class="range-boxes">
                 <input type="checkbox" :value="num" v-model="checkedBoxes"> {{num.min}} - {{num.max}}
             </div>
             <div>
@@ -24,11 +27,12 @@ export default {
         return {
             clicked: false,
             totalDataCount: this.data.length,
-            checkedBoxes: []
+            checkedBoxes: [],
+            allSelected: false
         }
     },
     computed: {
-        dividerGenerator() {
+        checkboxList() {
             let dividerNumber = parseInt(this.divider);
             let result = [];
             for (let index = 1; index <= this.totalDataCount; index++) {
@@ -40,6 +44,18 @@ export default {
                 }
             }
             return result;
+        }
+    },
+    methods: {
+        selectAll() {
+            this.allSelected = !this.allSelected;
+            this.checkedBoxes = [];
+            if (this.allSelected) {
+                let all = this.checkboxList;
+                for (const cb of all) {
+                    this.checkedBoxes.push(cb);
+                }
+            }
         }
     }
 }
