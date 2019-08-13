@@ -46,6 +46,17 @@
                 Eine <b>K</b>atze frisst eine <b>F</b>liege.
             </p>
         </div>
+        <div class="note">
+            <h3>Ihopsatta ord</h3>
+            <p>
+                Tyskand kan göra som svenskan och sätta ihop flera ord till ett långt <br>
+                Flaggstångsknoppsputsningsmedel osv... Korrekt artikel (der/die/das) för det nya ordet <br>
+                är då avsedd artikel för det <b>sista</b> ordet. Exempel: <br>
+                <b>Die</b> Orange<br>
+                <b>Der</b> Saft<br>
+                <b>Der</b> Orangensaft
+            </p>
+        </div>
     </div>
 </template>
 
