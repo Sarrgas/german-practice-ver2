@@ -23,6 +23,9 @@
         <div>
             <input type="text" placeholder="Svenska..." v-model.lazy="usrSwedish">
         </div>
+        <div>
+            <input type="text" placeholder="Plural..." v-model.lazy="usrPlural">
+        </div>
     </div>
 </template>
 
@@ -35,17 +38,19 @@ export default {
     data() {
         return {
             usrThe: '',
-            usrSwedish: ''
+            usrSwedish: '',
+            usrPlural: '',
         }
     },
     computed: {
         isAnswered() {
-            return this.usrThe && this.usrSwedish;
+            return this.usrThe && this.usrSwedish && this.usrPlural;
         },
         isCorrect() {
             return this.isAnswered && 
                    this.usrThe.toLowerCase() === this.noun.the.toLowerCase() &&
-                   this.usrSwedish.toLowerCase() === this.noun.swedish.toLowerCase();
+                   this.usrSwedish.toLowerCase() === this.noun.swedish.toLowerCase() &&
+                   this.usrPlural.toLowerCase() === this.noun.plural.toLowerCase();
         },
         answerColorClass(){
             if (!this.isAnswered) {
