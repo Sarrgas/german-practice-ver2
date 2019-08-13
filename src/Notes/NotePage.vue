@@ -57,6 +57,15 @@
                 <b>Der</b> Orangensaft
             </p>
         </div>
+        <div class="note">
+            <h3>Hitta rätt artikel</h3>
+            <p>
+                Icke-levande objekt som slutar på <b>e</b> är nästan alltid feminina (Die). <br>
+                Detsamma gäller också för de flesta djur. <br>
+                <br>
+                Ord som börjar med suffixet <b>ge</b> (Exempelvis Gemüse) är oftast neutral (Das).
+            </p>
+        </div>
     </div>
 </template>
 
