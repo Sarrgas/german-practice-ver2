@@ -34,6 +34,11 @@ const notes = [
         title: 'Hitta rätt artikel (tips)',
         text: 'Icke-levande objekt som slutar på <b>e</b> är nästan alltid feminina (Die). <br> Detsamma gäller också för de flesta djur. <br> <br> Ord som börjar med suffixet <b>ge</b> (Exempelvis Gemüse) är oftast neutral (Das).'
     },
+    {
+        id: 8,
+        title: 'The och That',
+        text: 'Tysta gör inte skillnad på <b>The</b> och <b>That</b>. Exempelvis kan "Die Katze" betyda både "<b>The</b> cat" och "<b>That</b> cat".'
+    },
 ];
 
 export default notes;
