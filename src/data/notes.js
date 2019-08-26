@@ -37,7 +37,12 @@ const notes = [
     {
         id: 8,
         title: 'The och That',
-        text: 'Tysta gör inte skillnad på <b>The</b> och <b>That</b>. Exempelvis kan "Die Katze" betyda både "<b>The</b> cat" och "<b>That</b> cat".'
+        text: 'Tyska gör inte skillnad på <b>The</b> och <b>That</b>. Exempelvis kan "Die Katze" betyda både "<b>The</b> cat" och "<b>That</b> cat".'
+    },
+    {
+        id: 9,
+        title: 'Ord som slutar på -ig',
+        text: 'Ord som slutar på -ig uttalas som om de slutade på <b>ich</b>. Exempelvis <b>fertig</b> och <b>traurig</b>.'
     },
 ];
 
