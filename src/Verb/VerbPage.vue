@@ -5,7 +5,6 @@
 </template>
 
 <script>
-import allVerbs from '../data/verbs.js';
 import VerbComponent from './VerbComponent.vue';
 
 export default {
@@ -25,7 +24,7 @@ export default {
             return nums;
         },
         sessionVerbs() {
-            return allVerbs.filter(verb => this.numbers.includes(verb.id));
+            return this.$store.getters.sessionVerbs(this.numbers);
         }
     },
 }

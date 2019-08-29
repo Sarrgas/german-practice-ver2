@@ -8,13 +8,12 @@
 </template>
 
 <script>
-import notes from '../data/notes.js'
 
 export default {
     name: 'NotePage',
     data() {
         return {
-            notes
+            notes: this.$store.getters.getAllNotes
         }
     }
 }

@@ -22,11 +22,10 @@
 <script>
 export default {
     name: 'MenuOption',
-    props: ['title', 'text', 'linkTo', 'data', 'divider'],
+    props: ['title', 'text', 'linkTo', 'divider'],
     data() {
         return {
             clicked: false,
-            totalDataCount: this.data.length,
             checkedBoxes: [],
             allSelected: false
         }
@@ -35,7 +34,7 @@ export default {
         checkboxList() {
             let dividerNumber = parseInt(this.divider);
             let result = [];
-            for (let index = 1; index <= this.totalDataCount; index++) {
+            for (let index = 1; index <= this.dataCount; index++) {
                 if (index % dividerNumber === 0) {
                     let min = 1 + index - dividerNumber;
                     let max = index;
@@ -44,6 +43,14 @@ export default {
                 }
             }
             return result;
+        },
+        dataCount() {
+            if (this.linkTo === "Nouns") {
+                return this.$store.getters.nounCount;
+            }
+            else {
+                return this.$store.getters.verbCount;
+            }
         }
     },
     methods: {

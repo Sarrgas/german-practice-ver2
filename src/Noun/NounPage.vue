@@ -6,7 +6,6 @@
 
 <script>
 import NounComponent from "./NounComponent.vue";
-import allnouns from '../data/nouns.js';
 
 export default {
     name: 'NounPage',
@@ -24,7 +23,7 @@ export default {
             return nums;
         },
         sessionNouns() {
-            return allnouns.filter(noun => this.numbers.includes(noun.id));
+            return this.$store.getters.sessionNouns(this.numbers);
         }
     },
     components: {NounComponent}
