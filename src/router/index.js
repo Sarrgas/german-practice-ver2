@@ -8,6 +8,9 @@ import NounPage from '../Noun/NounPage.vue';
 import VerbPage from '../Verb/VerbPage.vue';
 import NotePage from '../Notes/NotePage.vue';
 import AddPage from '../Add/AddPage.vue';
+import AddNoun from '../Add/AddNoun.vue';
+import AddNote from '../Add/AddNote.vue';
+import AddVerb from '../Add/AddVerb.vue';
 
 export default new Router({
     routes: [
@@ -37,6 +40,23 @@ export default new Router({
             path: '/add',
             name: 'Add',
             component: AddPage,
+            children: [
+                {
+                    path: 'noun',
+                    name: 'AddNoun',
+                    component: AddNoun
+                },
+                {
+                    path: 'verb',
+                    name: 'AddVerb',
+                    component: AddVerb
+                },
+                {
+                    path: 'note',
+                    name: 'AddNote',
+                    component: AddNote
+                }
+            ]
         }
     ],
 });

@@ -8,6 +8,11 @@ const notesmodule = {
         getAllNotes(state) {
             return state.notes;
         }
+    },
+    mutations: {
+        addNote(state, note) {
+            state.notes.push(note);
+        }
     }
 }
 
