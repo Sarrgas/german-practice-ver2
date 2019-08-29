@@ -1,4 +1,4 @@
-import allVerbs from '../data/verbs.js';
+import allVerbs from '../../data/verbs.js';
 
 const verbmodule = {
     state: {

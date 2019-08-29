@@ -1,4 +1,4 @@
-import allNotes from '../data/notes.js';
+import allNotes from '../../data/notes.js';
 
 const notesmodule = {
     state: {

@@ -1,4 +1,4 @@
-import allNouns from '../data/nouns.js';
+import allNouns from '../../data/nouns.js';
 
 const nounmodule = {
     state: {

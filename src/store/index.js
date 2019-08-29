@@ -3,9 +3,9 @@ import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
-import verbmodule from './verbmodule.js';
-import nounmodule from './nounmodule.js';
-import notesmodule from './notesmodule.js';
+import verbmodule from './modules/verbs.js';
+import nounmodule from './modules/nouns.js';
+import notesmodule from './modules/notes.js';
 
 export default new Vuex.Store({
     modules: {
