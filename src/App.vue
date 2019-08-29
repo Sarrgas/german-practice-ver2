@@ -5,7 +5,7 @@
         <ul>
           <li><router-link :to="{name: 'Home'}" exact> <div class="nav-item">Hem</div></router-link></li>
           <li><router-link :to="{name: 'Notes'}" exact> <div class="nav-item">Anteckningar</div></router-link></li>
-          <li><router-link :to="{name: 'Add'}" exact> <div class="nav-item">Lägg till ord</div></router-link></li>
+          <li><router-link :to="{name: 'AddNoun'}" exact> <div class="nav-item">Lägg till ord</div></router-link></li>
         </ul>
       </nav>
     </header>

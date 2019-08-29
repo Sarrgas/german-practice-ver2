@@ -25,12 +25,14 @@ export default {
     methods: {
         commitNewNote(){
             const newNote = {
-                id: 999,
+                id: 999, // TEMP
                 title: this.title,
                 text: this.text
             };
 
             this.$store.commit('addNote', newNote);
+            this.title = '';
+            this.text = '';
         }
     }
 }

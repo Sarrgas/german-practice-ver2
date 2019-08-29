@@ -4,6 +4,11 @@ const nounmodule = {
     state: {
         nouns: allNouns
     },
+    mutations: {
+        addNoun(state, noun) {
+            state.nouns.push(noun);
+        }
+    },
     getters: {
         nounCount(state){
             return state.nouns.length;

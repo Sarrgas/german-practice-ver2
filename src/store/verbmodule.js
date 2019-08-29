@@ -4,6 +4,11 @@ const verbmodule = {
     state: {
         verbs: allVerbs
     },
+    mutations: {
+        addVerb(state, verb){
+            state.verbs.push(verb);
+        }
+    },
     getters: {
         verbCount(state){
             return state.verbs.length;

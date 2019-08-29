@@ -1,6 +1,5 @@
 <template>
     <div id="content">
-        <button @click="addDummyNote">Lägg till</button>
         <div class="note" v-for="(note, i) in notes" :key="i">
             <h3 v-html="note.title"></h3>
             <p v-html="note.text"></p>
@@ -15,17 +14,6 @@ export default {
     data() {
         return {
             notes: this.$store.getters.getAllNotes
-        }
-    },
-    methods: {
-        addDummyNote() {
-            const dummyNote = {
-                id: 999,
-                title: 'Dummynote',
-                text: 'Tjolahopp tjolahej'
-            };
-
-            this.$store.commit('addNote', dummyNote);
         }
     }
 }
