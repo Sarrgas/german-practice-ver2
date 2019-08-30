@@ -49,7 +49,7 @@ export default {
                 return this.$store.getters.getNounCount;
             }
             else {
-                return this.$store.getters.verbCount;
+                return this.$store.getters.getVerbCount;
             }
         }
     },

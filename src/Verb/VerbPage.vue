@@ -24,7 +24,7 @@ export default {
             return nums;
         },
         sessionVerbs() {
-            return this.$store.getters.sessionVerbs(this.numbers);
+            return this.$store.getters.getSessionVerbs(this.numbers);
         }
     },
 }

@@ -26,7 +26,7 @@ const nounmodule = {
     actions: {
         init({commit}){
             dbAccessGetNouns().then(function(snapshot) {
-                commit('setNouns', snapshot.val())
+                commit('setNouns', snapshot.val());
             });
         },
         addNoun({commit}, noun){

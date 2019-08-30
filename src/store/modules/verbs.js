@@ -1,20 +1,37 @@
-import allVerbs from '../../data/verbs.js';
+import {dbAccessGetVerbs, dbAccessInsertVerb} from '../../dbaccess'
 
 const verbmodule = {
     state: {
-        verbs: allVerbs
+        verbs: []
+    },
+    getters: {
+        getVerbCount(state){
+            return state.verbs.length;
+        },
+        getSessionVerbs: (state) => (ids) => {
+            return state.verbs.filter(verb => ids.includes(parseInt(verb.id)));
+        },
+        getNextVerbId(state){
+            return state.verbs.length + 1;
+        }
     },
     mutations: {
         addVerb(state, verb){
             state.verbs.push(verb);
+        },
+        setVerbs(state, verbs){
+            state.verbs = verbs;
         }
     },
-    getters: {
-        verbCount(state){
-            return state.verbs.length;
+    actions: {
+        init({commit}) {
+            dbAccessGetVerbs().then(function(snapshot) {
+                commit('setVerbs', snapshot.val());
+            });
         },
-        sessionVerbs: (state) => (ids) => {
-            return state.verbs.filter(verb => ids.includes(verb.id));
+        addVerb({commit}, verb) {
+            commit('addVerb', verb);
+            dbAccessInsertVerb(verb);
         }
     }
 } 

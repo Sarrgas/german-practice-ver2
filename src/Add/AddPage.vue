@@ -2,9 +2,9 @@
     <div>
         <nav class="inner-nav">
             <ul>
-                <li><router-link to="/add/noun">Go to nouns</router-link></li>
-                <li><router-link to="/add/verb">Go to verb</router-link></li>
-                <li><router-link to="/add/note">Go to notes</router-link></li>
+                <li><router-link to="/add/noun">Lägg till substantiv</router-link></li>
+                <li><router-link to="/add/verb">Lägg till verb</router-link></li>
+                <li><router-link to="/add/note">Lägg till anteckning</router-link></li>
             </ul>
         </nav>
         <div class="content">

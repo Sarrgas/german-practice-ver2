@@ -1,7 +1,7 @@
-const firebase = require('firebase');
 import firebaseConfig from './firebaseConfig';
+const firebase = require('firebase');
 
-var app = firebase.initializeApp(firebaseConfig);
+const app = firebase.initializeApp(firebaseConfig);
 const database = app.database();
 
 function dbAccessInsertNote(note){
@@ -30,4 +30,26 @@ function dbAccessInsertNoun(noun){
     });
 }
 
-export { dbAccessGetNotes, dbAccessInsertNote, dbAccessGetNouns, dbAccessInsertNoun};
+function dbAccessGetVerbs(){
+    return database.ref('verbs').once('value');
+}
+
+function dbAccessInsertVerb(verb){
+    database.ref('verbs').push({
+        id: verb.id,
+        german: verb.german,
+        swedish: verb.swedish,
+        ich: verb.ich,
+        du: verb.du,
+        ersiees: verb.ersiees,
+        wir: verb.wir,
+        ihr: verb.ihr,
+        sie: verb.sie
+    });
+}
+
+export { 
+    dbAccessGetNotes, dbAccessInsertNote, 
+    dbAccessGetNouns, dbAccessInsertNoun, 
+    dbAccessGetVerbs, dbAccessInsertVerb
+};

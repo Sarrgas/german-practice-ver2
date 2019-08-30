@@ -55,7 +55,7 @@ export default {
     methods: {
         addVerb() {
             const newVerb = {
-                id: 999, //TEMP
+                id: this.$store.getters.getNextVerbId,
                 german: this.german,
                 swedish: this.swedish,
                 ich: this.ich,
@@ -66,7 +66,7 @@ export default {
                 sie: this.sie
             };
 
-            this.$store.commit('addVerb', newVerb);
+            this.$store.dispatch('addVerb', newVerb);
 
             this.german = '';
             this.swedish = '';
