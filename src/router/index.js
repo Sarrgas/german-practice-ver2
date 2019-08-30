@@ -7,6 +7,7 @@ import HomePage from '../Home/HomePage.vue';
 import NounPage from '../Noun/NounPage.vue';
 import VerbPage from '../Verb/VerbPage.vue';
 import NotePage from '../Notes/NotePage.vue';
+import AdjectivePage from '../Adjectives/AdjectivePage.vue';
 import AddPage from '../Add/AddPage.vue';
 import AddNoun from '../Add/AddNoun.vue';
 import AddNote from '../Add/AddNote.vue';
@@ -30,6 +31,12 @@ export default new Router({
             name: 'Verbs',
             props: true,
             component: VerbPage,
+        },
+        {
+            path: '/adjectives',
+            name: 'Adjectives',
+            props: true,
+            component: AdjectivePage,
         },
         {
             path: '/notes',

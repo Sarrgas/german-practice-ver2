@@ -45,11 +45,15 @@ export default {
             return result;
         },
         dataCount() {
+            // Detta är rätt ful kod. Överväg andra alternativ.
             if (this.linkTo === "Nouns") {
                 return this.$store.getters.getNounCount;
             }
-            else {
+            else if (this.linkTo === "Verbs") {
                 return this.$store.getters.getVerbCount;
+            }
+            else {
+                return 5; // TEMP
             }
         }
     },
