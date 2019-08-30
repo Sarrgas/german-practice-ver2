@@ -48,8 +48,21 @@ function dbAccessInsertVerb(verb){
     });
 }
 
+function dbAccessGetAdjectives(){
+    return database.ref('adjectives').once('value');
+}
+
+function dbAccessInsertAdjective(adjective){
+    database.ref('adjectives').push({
+        id: adjective.id,
+        german: adjective.german,
+        swedish: adjective.swedish
+    });
+}
+
 export { 
     dbAccessGetNotes, dbAccessInsertNote, 
     dbAccessGetNouns, dbAccessInsertNoun, 
-    dbAccessGetVerbs, dbAccessInsertVerb
+    dbAccessGetVerbs, dbAccessInsertVerb,
+    dbAccessGetAdjectives, dbAccessInsertAdjective
 };

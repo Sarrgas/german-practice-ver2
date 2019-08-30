@@ -53,7 +53,8 @@ export default {
                 return this.$store.getters.getVerbCount;
             }
             else {
-                return 5; // TEMP
+                console.log(this.$store.getters.getAdjectivesCount);
+                return this.$store.getters.getAdjectivesCount;
             }
         }
     },

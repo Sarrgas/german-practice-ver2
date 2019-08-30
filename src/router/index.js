@@ -12,6 +12,7 @@ import AddPage from '../Add/AddPage.vue';
 import AddNoun from '../Add/AddNoun.vue';
 import AddNote from '../Add/AddNote.vue';
 import AddVerb from '../Add/AddVerb.vue';
+import AddAdjective from '../Add/AddAdjective.vue';
 
 export default new Router({
     routes: [
@@ -57,6 +58,11 @@ export default new Router({
                     path: 'verb',
                     name: 'AddVerb',
                     component: AddVerb
+                },
+                {
+                    path: 'adjective',
+                    name: 'AddAdjective',
+                    component: AddAdjective
                 },
                 {
                     path: 'note',

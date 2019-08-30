@@ -4,6 +4,7 @@
             <ul>
                 <li><router-link to="/add/noun">Lägg till substantiv</router-link></li>
                 <li><router-link to="/add/verb">Lägg till verb</router-link></li>
+                <li><router-link to="/add/adjective">Lägg till adjektiv</router-link></li>
                 <li><router-link to="/add/note">Lägg till anteckning</router-link></li>
             </ul>
         </nav>
