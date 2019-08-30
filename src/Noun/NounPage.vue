@@ -23,7 +23,7 @@ export default {
             return nums;
         },
         sessionNouns() {
-            return this.$store.getters.sessionNouns(this.numbers);
+            return this.$store.getters.getSessionNouns(this.numbers);
         }
     },
     components: {NounComponent}

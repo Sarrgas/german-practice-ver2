@@ -39,14 +39,14 @@ export default {
     methods: {
         addNoun() {
             const newNoun = {
-                id: 999, // TEMP
+                id: this.$store.getters.getNextNounId,
                 the: this.the,
                 german: this.german,
                 plural: this.plural,
                 swedish: this.swedish
             };
 
-            this.$store.commit('addNoun', newNoun);
+            this.$store.dispatch('addNoun', newNoun);
 
             this.the = '';
             this.german = '';

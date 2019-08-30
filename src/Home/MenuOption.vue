@@ -46,7 +46,7 @@ export default {
         },
         dataCount() {
             if (this.linkTo === "Nouns") {
-                return this.$store.getters.nounCount;
+                return this.$store.getters.getNounCount;
             }
             else {
                 return this.$store.getters.verbCount;
