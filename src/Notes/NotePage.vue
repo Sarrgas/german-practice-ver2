@@ -11,9 +11,9 @@
 
 export default {
     name: 'NotePage',
-    data() {
-        return {
-            notes: this.$store.getters.getAllNotes
+    computed: {
+        notes() {
+            return this.$store.getters.getAllNotes;
         }
     }
 }

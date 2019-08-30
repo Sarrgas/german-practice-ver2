@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import testDbWrite from "../dbaccess";
 export default {
     name: 'AddNote',
     data() {
@@ -26,13 +25,12 @@ export default {
     methods: {
         commitNewNote(){
             const newNote = {
-                id: 999, // TEMP
+                id: this.$store.getters.getNextNoteId,
                 title: this.title,
                 text: this.text
             };
 
-            this.$store.commit('addNote', newNote);
-            testDbWrite(newNote);
+            this.$store.dispatch('addNote', newNote);
             this.title = '';
             this.text = '';
         }

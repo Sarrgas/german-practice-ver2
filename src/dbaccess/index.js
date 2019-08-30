@@ -4,20 +4,16 @@ import firebaseConfig from './firebaseConfig';
 var app = firebase.initializeApp(firebaseConfig);
 const database = app.database();
 
-function testDbWrite(newNote){
-    testDbGet();
+function dbAccessInsertNote(newNote){
     database.ref('notes').push({
-        id: 999, // TODO. Låt Firebase fixa IDn som löpnummer.
+        id: newNote.id,
         title: newNote.title,
         text: newNote.text
     });
 }
 
-function testDbGet(){
-    database.ref('notes').on('value', function(snapshot) {
-        // eslint-disable-next-line no-console
-        console.log(snapshot.val());
-    });
+function dbAccessGetNotes(){
+    return database.ref('notes').once('value');
 }
 
-export default testDbWrite;
+export { dbAccessGetNotes, dbAccessInsertNote };
