@@ -12,7 +12,7 @@ export default new Vuex.Store({
     modules: {
         verbs: verbmodule,
         nouns: nounmodule,
-        adjectivesmodule,
+        adjectives: adjectivesmodule,
         notes: notesmodule
     }
 });
