@@ -1,6 +1,6 @@
 <template>
   <div>
-      <AdjectiveComponent v-for="(ad, i) in sessionAdjectives" :key="i"/>
+      <AdjectiveComponent v-for="(ad, i) in sessionAdjectives" :adjective="ad" :key="i"/>
   </div>
 </template>
 
