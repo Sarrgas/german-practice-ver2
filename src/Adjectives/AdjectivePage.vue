@@ -1,14 +1,15 @@
 <template>
   <div>
-      <h1>Das grosse AdjectivePage!</h1>
+      <AdjectiveComponent v-for="(ad, i) in sessionAdjectives" :key="i"/>
   </div>
 </template>
 
 <script>
+import AdjectiveComponent from "./AdjectiveComponent";
 export default {
     name: 'AdjectivePage',
     props: {
-        checkBoxes: Array
+        checkedBoxes: Array
     },
     computed: {
         numbers() {
@@ -21,9 +22,10 @@ export default {
             return nums;
         },
         sessionAdjectives() {
-            return null;// this.$store.getters.getSessionAdjectives(this.numbers);
+            return this.$store.getters.getSessionAdjectives(this.numbers);
         }
     },
+    components: {AdjectiveComponent}
 }
 </script>
 

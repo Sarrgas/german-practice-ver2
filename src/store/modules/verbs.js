@@ -1,4 +1,4 @@
-import {dbAccessGetVerbs, dbAccessInsertVerb} from '../../dbaccess'
+import {dbAccessGetVerbs, dbAccessSetVerbs} from '../../dbaccess'
 
 const verbmodule = {
     state: {
@@ -29,9 +29,9 @@ const verbmodule = {
                 commit('setVerbs', snapshot.val());
             });
         },
-        addVerb({commit}, verb) {
+        addVerb({commit, state}, verb) {
             commit('addVerb', verb);
-            dbAccessInsertVerb(verb);
+            dbAccessSetVerbs(state.verbs);
         }
     }
 } 

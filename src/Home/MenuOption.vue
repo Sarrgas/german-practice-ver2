@@ -53,7 +53,6 @@ export default {
                 return this.$store.getters.getVerbCount;
             }
             else {
-                console.log(this.$store.getters.getAdjectivesCount);
                 return this.$store.getters.getAdjectivesCount;
             }
         }

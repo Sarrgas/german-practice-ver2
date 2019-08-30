@@ -4,12 +4,8 @@ const firebase = require('firebase');
 const app = firebase.initializeApp(firebaseConfig);
 const database = app.database();
 
-function dbAccessInsertNote(note){
-    database.ref('notes').push({
-        id: note.id,
-        title: note.title,
-        text: note.text
-    });
+function dbAccessSetNotes(notes){
+    database.ref('notes').set(notes);
 }
 
 function dbAccessGetNotes(){
@@ -20,49 +16,29 @@ function dbAccessGetNouns(){
     return database.ref('nouns').once('value');
 }
 
-function dbAccessInsertNoun(noun){
-    database.ref('nouns').push({
-        id: noun.id,
-        german: noun.german,
-        swedish: noun.swedish,
-        plural: noun.plural,
-        the: noun.the
-    });
+function dbAccessSetNouns(nouns){
+    database.ref('nouns').set(nouns);
 }
 
 function dbAccessGetVerbs(){
     return database.ref('verbs').once('value');
 }
 
-function dbAccessInsertVerb(verb){
-    database.ref('verbs').push({
-        id: verb.id,
-        german: verb.german,
-        swedish: verb.swedish,
-        ich: verb.ich,
-        du: verb.du,
-        ersiees: verb.ersiees,
-        wir: verb.wir,
-        ihr: verb.ihr,
-        sie: verb.sie
-    });
+function dbAccessSetVerbs(verbs){
+    database.ref('verbs').set(verbs);
 }
 
 function dbAccessGetAdjectives(){
     return database.ref('adjectives').once('value');
 }
 
-function dbAccessInsertAdjective(adjective){
-    database.ref('adjectives').push({
-        id: adjective.id,
-        german: adjective.german,
-        swedish: adjective.swedish
-    });
+function dbAccessSetAdjectives(adjectives){
+    database.ref('adjectives').set(adjectives);
 }
 
 export { 
-    dbAccessGetNotes, dbAccessInsertNote, 
-    dbAccessGetNouns, dbAccessInsertNoun, 
-    dbAccessGetVerbs, dbAccessInsertVerb,
-    dbAccessGetAdjectives, dbAccessInsertAdjective
+    dbAccessGetNotes, dbAccessSetNotes, 
+    dbAccessGetNouns, dbAccessSetNouns, 
+    dbAccessGetVerbs, dbAccessSetVerbs,
+    dbAccessGetAdjectives, dbAccessSetAdjectives
 };

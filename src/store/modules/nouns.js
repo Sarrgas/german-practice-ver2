@@ -1,4 +1,4 @@
-import {dbAccessGetNouns, dbAccessInsertNoun} from '../../dbaccess'
+import {dbAccessGetNouns, dbAccessSetNouns} from '../../dbaccess'
 
 const nounmodule = {
     state: {
@@ -29,9 +29,9 @@ const nounmodule = {
                 commit('setNouns', snapshot.val());
             });
         },
-        addNoun({commit}, noun){
+        addNoun({commit, state}, noun){
             commit('addNoun', noun);
-            dbAccessInsertNoun(noun);
+            dbAccessSetNouns(state.nouns);
         }
     }
 } 

@@ -1,4 +1,4 @@
-import { dbAccessGetAdjectives, dbAccessInsertAdjective } from "../../dbaccess";
+import { dbAccessGetAdjectives, dbAccessSetAdjectives } from "../../dbaccess";
 
 const adjectivemodule = {
     state: {
@@ -29,9 +29,9 @@ const adjectivemodule = {
                 commit('setAdjectives', snapshot.val());
             });
         },
-        addAdjective({commit}, adjective){
+        addAdjective({commit, state}, adjective){
             commit('addAdjective', adjective);
-            dbAccessInsertAdjective(adjective);
+            dbAccessSetAdjectives(state.adjectives);
         }
     }
 }

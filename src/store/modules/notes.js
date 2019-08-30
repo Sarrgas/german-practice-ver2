@@ -1,4 +1,4 @@
-import {dbAccessGetNotes, dbAccessInsertNote} from '../../dbaccess';
+import {dbAccessGetNotes, dbAccessSetNotes} from '../../dbaccess';
 
 const notesmodule = {
     state: {
@@ -29,9 +29,9 @@ const notesmodule = {
                 commit('setNotes', snapshot.val());
             });
         },
-        addNote({commit}, note){
+        addNote({commit, state}, note){
             commit('addNote', note);
-            dbAccessInsertNote(note);
+            dbAccessSetNotes(state.notes);
         }
     }
 }
