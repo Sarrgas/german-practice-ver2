@@ -1,16 +1,5 @@
 const firebase = require('firebase');
-
-// TODO - separera till egen fil, och lägg den filen på .gitignore
-// Detta är typ min "app secret" som inte bör ligga publikt på GitHub
-const firebaseConfig = {
-    apiKey: "AIzaSyARvAAKn7cXdqN46S9VeoJBLdNTNUflwsA",
-    authDomain: "german-practice-5ba79.firebaseapp.com",
-    databaseURL: "https://german-practice-5ba79.firebaseio.com",
-    projectId: "german-practice-5ba79",
-    storageBucket: "",
-    messagingSenderId: "1051338834714",
-    appId: "1:1051338834714:web:c42643d0897edee0"
-  };
+import firebaseConfig from './firebaseConfig';
 
 var app = firebase.initializeApp(firebaseConfig);
 const database = app.database();
