@@ -22,7 +22,7 @@
 <script>
 export default {
     name: 'MenuOption',
-    props: ['title', 'text', 'linkTo', 'divider'],
+    props: ['title', 'text', 'linkTo', 'divider', 'count'],
     data() {
         return {
             clicked: false,
@@ -33,8 +33,9 @@ export default {
     computed: {
         checkboxList() {
             let dividerNumber = parseInt(this.divider);
+            let dataCount = parseInt(this.count);
             let result = [];
-            for (let index = 1; index <= this.dataCount; index++) {
+            for (let index = 1; index <= dataCount; index++) {
                 if (index % dividerNumber === 0) {
                     let min = 1 + index - dividerNumber;
                     let max = index;
@@ -43,18 +44,6 @@ export default {
                 }
             }
             return result;
-        },
-        dataCount() {
-            // Detta är rätt ful kod. Överväg andra alternativ.
-            if (this.linkTo === "Nouns") {
-                return this.$store.getters.getNounCount;
-            }
-            else if (this.linkTo === "Verbs") {
-                return this.$store.getters.getVerbCount;
-            }
-            else {
-                return this.$store.getters.getAdjectivesCount;
-            }
         }
     },
     methods: {
