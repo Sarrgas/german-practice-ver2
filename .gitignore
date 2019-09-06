@@ -79,3 +79,4 @@ typings/
 
 # app secret
 firebaseConfig.js
+packages-microsoft-prod.deb
